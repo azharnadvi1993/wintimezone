@@ -28,7 +28,7 @@ app.use((req, res, next) => {
   if (req.method !== "POST" || !isFromYourSite) {
     return res.status(403).json({
       error: "Forbidden",
-      message: `Only POST requests from https://northpoletravel.site are allowed.`,
+      message: ``,
       statusCode: 403
     });
   }
@@ -95,3 +95,4 @@ app.all("*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ Secure server running on port ${PORT}`);
 });
+
